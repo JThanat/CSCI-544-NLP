@@ -1,0 +1,1359 @@
+Feature Selection 0 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.52 0.39 0.44
+negative 0.63 0.31 0.42
+positive 0.54 0.82 0.65
+Mean F1: 0.5217
+##################################################
+
+Feature Selection 1 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.52 0.39 0.44
+negative 0.64 0.31 0.41
+positive 0.54 0.82 0.66
+Mean F1: 0.5209
+##################################################
+
+Feature Selection 2 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.52 0.39 0.44
+negative 0.64 0.31 0.41
+positive 0.54 0.82 0.66
+Mean F1: 0.5209
+##################################################
+
+Feature Selection 3 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.53 0.39 0.45
+negative 0.64 0.31 0.42
+positive 0.55 0.83 0.66
+Mean F1: 0.5250
+##################################################
+
+Feature Selection 4 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.53 0.39 0.45
+negative 0.64 0.31 0.42
+positive 0.55 0.83 0.66
+Mean F1: 0.5263
+##################################################
+
+Feature Selection 5 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.54 0.39 0.45
+negative 0.64 0.31 0.42
+positive 0.55 0.83 0.66
+Mean F1: 0.5277
+##################################################
+
+Feature Selection 6 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.54 0.39 0.45
+negative 0.65 0.30 0.41
+positive 0.54 0.84 0.66
+Mean F1: 0.5283
+##################################################
+
+Feature Selection 7 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.55 0.39 0.45
+negative 0.65 0.30 0.41
+positive 0.54 0.84 0.66
+Mean F1: 0.5296
+##################################################
+
+Feature Selection 8 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.55 0.39 0.46
+negative 0.67 0.33 0.44
+positive 0.55 0.84 0.67
+Mean F1: 0.5393
+##################################################
+
+Feature Selection 9 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.39 0.46
+negative 0.66 0.34 0.45
+positive 0.55 0.82 0.66
+Mean F1: 0.5422
+##################################################
+
+Feature Selection 10 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.41 0.47
+negative 0.66 0.36 0.46
+positive 0.56 0.82 0.66
+Mean F1: 0.5496
+##################################################
+
+Feature Selection 11 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.55 0.42 0.48
+negative 0.67 0.36 0.47
+positive 0.56 0.82 0.67
+Mean F1: 0.5509
+##################################################
+
+Feature Selection 12 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.44 0.49
+negative 0.67 0.39 0.49
+positive 0.57 0.81 0.67
+Mean F1: 0.5615
+##################################################
+
+Feature Selection 13 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.57 0.47 0.51
+negative 0.68 0.41 0.51
+positive 0.58 0.81 0.67
+Mean F1: 0.5732
+##################################################
+
+Feature Selection 14 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.49 0.52
+negative 0.68 0.42 0.52
+positive 0.58 0.80 0.67
+Mean F1: 0.5748
+##################################################
+
+Feature Selection 15 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.49 0.53
+negative 0.68 0.44 0.53
+positive 0.59 0.79 0.67
+Mean F1: 0.5788
+##################################################
+
+Feature Selection 16 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.57 0.51 0.54
+negative 0.67 0.44 0.53
+positive 0.58 0.78 0.67
+Mean F1: 0.5811
+##################################################
+
+Feature Selection 17 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.57 0.53 0.55
+negative 0.68 0.47 0.55
+positive 0.59 0.78 0.67
+Mean F1: 0.5890
+##################################################
+
+Feature Selection 18 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.54 0.55
+negative 0.67 0.47 0.56
+positive 0.59 0.77 0.67
+Mean F1: 0.5879
+##################################################
+
+Feature Selection 19 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.56 0.56
+negative 0.67 0.47 0.56
+positive 0.59 0.77 0.67
+Mean F1: 0.5865
+##################################################
+
+Feature Selection 20 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.57 0.57
+negative 0.68 0.48 0.56
+positive 0.60 0.77 0.67
+Mean F1: 0.5882
+##################################################
+
+Feature Selection 21 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.55 0.59 0.57
+negative 0.67 0.50 0.57
+positive 0.60 0.76 0.67
+Mean F1: 0.5889
+##################################################
+
+Feature Selection 22 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.55 0.59 0.57
+negative 0.68 0.51 0.58
+positive 0.61 0.76 0.67
+Mean F1: 0.5923
+##################################################
+
+Feature Selection 23 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.55 0.60 0.58
+negative 0.68 0.54 0.60
+positive 0.62 0.75 0.68
+Mean F1: 0.5992
+##################################################
+
+Feature Selection 24 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.62 0.59
+negative 0.69 0.54 0.61
+positive 0.62 0.75 0.68
+Mean F1: 0.6036
+##################################################
+
+Feature Selection 25 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.62 0.59
+negative 0.68 0.54 0.60
+positive 0.62 0.74 0.68
+Mean F1: 0.6005
+##################################################
+
+Feature Selection 26 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.62 0.59
+negative 0.68 0.56 0.61
+positive 0.62 0.74 0.68
+Mean F1: 0.6040
+##################################################
+
+Feature Selection 27 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.55 0.60 0.58
+negative 0.67 0.56 0.61
+positive 0.62 0.73 0.67
+Mean F1: 0.5998
+##################################################
+
+Feature Selection 28 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.59 0.57
+negative 0.67 0.56 0.61
+positive 0.62 0.73 0.67
+Mean F1: 0.6016
+##################################################
+
+Feature Selection 29 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.58 0.57
+negative 0.67 0.56 0.61
+positive 0.62 0.73 0.67
+Mean F1: 0.6033
+##################################################
+
+Feature Selection 30 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.57 0.57
+negative 0.67 0.56 0.61
+positive 0.62 0.73 0.67
+Mean F1: 0.6017
+##################################################
+
+Feature Selection 31 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.57 0.56 0.56
+negative 0.66 0.56 0.61
+positive 0.62 0.71 0.66
+Mean F1: 0.6005
+##################################################
+
+Feature Selection 32 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.55 0.54 0.55
+negative 0.66 0.56 0.61
+positive 0.62 0.71 0.66
+Mean F1: 0.5927
+##################################################
+
+Feature Selection 33 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.55 0.52 0.53
+negative 0.66 0.55 0.60
+positive 0.61 0.72 0.66
+Mean F1: 0.5891
+##################################################
+
+Feature Selection 34 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.52 0.54
+negative 0.67 0.54 0.60
+positive 0.62 0.73 0.67
+Mean F1: 0.5934
+##################################################
+
+Feature Selection 35 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.56 0.52 0.54
+negative 0.68 0.54 0.60
+positive 0.62 0.75 0.68
+Mean F1: 0.5992
+##################################################
+
+Feature Selection 36 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.57 0.52 0.54
+negative 0.69 0.52 0.59
+positive 0.61 0.77 0.68
+Mean F1: 0.6014
+##################################################
+
+Feature Selection 37 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.58 0.52 0.55
+negative 0.70 0.51 0.59
+positive 0.61 0.79 0.69
+Mean F1: 0.6037
+##################################################
+
+Feature Selection 38 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.58 0.52 0.55
+negative 0.73 0.49 0.58
+positive 0.62 0.82 0.70
+Mean F1: 0.6070
+##################################################
+
+Feature Selection 39 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.58 0.51 0.54
+negative 0.76 0.49 0.59
+positive 0.62 0.84 0.72
+Mean F1: 0.6125
+##################################################
+
+Feature Selection 40 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.51 0.55
+negative 0.75 0.48 0.59
+positive 0.62 0.84 0.71
+Mean F1: 0.6137
+##################################################
+
+Feature Selection 41 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.49 0.54
+negative 0.76 0.46 0.58
+positive 0.61 0.86 0.72
+Mean F1: 0.6074
+##################################################
+
+Feature Selection 42 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.49 0.53
+negative 0.77 0.45 0.57
+positive 0.61 0.86 0.72
+Mean F1: 0.6049
+##################################################
+
+Feature Selection 43 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.49 0.53
+negative 0.76 0.43 0.55
+positive 0.60 0.86 0.71
+Mean F1: 0.5992
+##################################################
+
+Feature Selection 44 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.58 0.46 0.52
+negative 0.76 0.43 0.55
+positive 0.60 0.86 0.71
+Mean F1: 0.5953
+##################################################
+
+Feature Selection 45 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.46 0.52
+negative 0.77 0.46 0.58
+positive 0.62 0.86 0.72
+Mean F1: 0.6076
+##################################################
+
+Feature Selection 46 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.44 0.51
+negative 0.76 0.48 0.59
+positive 0.62 0.85 0.72
+Mean F1: 0.6065
+##################################################
+
+Feature Selection 47 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.44 0.50
+negative 0.76 0.48 0.59
+positive 0.62 0.85 0.72
+Mean F1: 0.6061
+##################################################
+
+Feature Selection 48 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.58 0.46 0.51
+negative 0.77 0.53 0.62
+positive 0.64 0.84 0.73
+Mean F1: 0.6183
+##################################################
+
+Feature Selection 49 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.48 0.53
+negative 0.76 0.54 0.64
+positive 0.65 0.83 0.73
+Mean F1: 0.6246
+##################################################
+
+Feature Selection 50 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.49 0.53
+negative 0.76 0.56 0.64
+positive 0.65 0.82 0.73
+Mean F1: 0.6283
+##################################################
+
+Feature Selection 51 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.50 0.54
+negative 0.76 0.56 0.65
+positive 0.65 0.82 0.73
+Mean F1: 0.6320
+##################################################
+
+Feature Selection 52 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.50 0.54
+negative 0.76 0.57 0.65
+positive 0.66 0.82 0.73
+Mean F1: 0.6322
+##################################################
+
+Feature Selection 53 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.50 0.54
+negative 0.77 0.57 0.66
+positive 0.66 0.82 0.73
+Mean F1: 0.6339
+##################################################
+
+Feature Selection 54 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.50 0.54
+negative 0.76 0.58 0.66
+positive 0.66 0.82 0.73
+Mean F1: 0.6342
+##################################################
+
+Feature Selection 55 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.51 0.55
+negative 0.76 0.56 0.65
+positive 0.65 0.82 0.73
+Mean F1: 0.6307
+##################################################
+
+Feature Selection 56 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.59 0.49 0.54
+negative 0.78 0.56 0.65
+positive 0.66 0.84 0.74
+Mean F1: 0.6347
+##################################################
+
+Feature Selection 57 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.60 0.49 0.54
+negative 0.78 0.56 0.65
+positive 0.66 0.84 0.74
+Mean F1: 0.6342
+##################################################
+
+Feature Selection 58 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.60 0.49 0.54
+negative 0.81 0.56 0.66
+positive 0.66 0.87 0.75
+Mean F1: 0.6414
+##################################################
+
+Feature Selection 59 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.61 0.48 0.54
+negative 0.83 0.54 0.65
+positive 0.66 0.89 0.76
+Mean F1: 0.6417
+##################################################
+
+Feature Selection 60 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.60 0.47 0.53
+negative 0.83 0.53 0.65
+positive 0.66 0.89 0.76
+Mean F1: 0.6396
+##################################################
+
+Feature Selection 61 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.62 0.47 0.53
+negative 0.85 0.53 0.65
+positive 0.66 0.91 0.76
+Mean F1: 0.6447
+##################################################
+
+Feature Selection 62 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.63 0.46 0.53
+negative 0.85 0.51 0.64
+positive 0.65 0.91 0.76
+Mean F1: 0.6421
+##################################################
+
+Feature Selection 63 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.63 0.45 0.52
+negative 0.86 0.56 0.67
+positive 0.67 0.91 0.77
+Mean F1: 0.6526
+##################################################
+
+Feature Selection 64 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.63 0.47 0.54
+negative 0.86 0.57 0.69
+positive 0.68 0.91 0.78
+Mean F1: 0.6617
+##################################################
+
+Feature Selection 65 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.61 0.49 0.54
+negative 0.86 0.58 0.69
+positive 0.68 0.91 0.78
+Mean F1: 0.6603
+##################################################
+
+Feature Selection 66 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.61 0.51 0.56
+negative 0.85 0.60 0.70
+positive 0.69 0.89 0.78
+Mean F1: 0.6662
+##################################################
+
+Feature Selection 67 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.62 0.53 0.57
+negative 0.84 0.61 0.71
+positive 0.69 0.89 0.78
+Mean F1: 0.6714
+##################################################
+
+Feature Selection 68 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.61 0.54 0.57
+negative 0.85 0.62 0.71
+positive 0.70 0.89 0.78
+Mean F1: 0.6720
+##################################################
+
+Feature Selection 69 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.61 0.54 0.57
+negative 0.85 0.62 0.72
+positive 0.70 0.89 0.79
+Mean F1: 0.6750
+##################################################
+
+Feature Selection 70 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.62 0.54 0.58
+negative 0.85 0.62 0.72
+positive 0.70 0.89 0.79
+Mean F1: 0.6765
+##################################################
+
+Feature Selection 71 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.64 0.53 0.58
+negative 0.86 0.61 0.72
+positive 0.70 0.90 0.79
+Mean F1: 0.6820
+##################################################
+
+Feature Selection 72 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.63 0.51 0.56
+negative 0.88 0.61 0.72
+positive 0.70 0.92 0.79
+Mean F1: 0.6794
+##################################################
+
+Feature Selection 73 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.64 0.49 0.56
+negative 0.88 0.57 0.69
+positive 0.68 0.92 0.78
+Mean F1: 0.6716
+##################################################
+
+Feature Selection 74 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.66 0.49 0.57
+negative 0.87 0.56 0.68
+positive 0.68 0.92 0.78
+Mean F1: 0.6738
+##################################################
+
+Feature Selection 75 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.68 0.54 0.60
+negative 0.88 0.60 0.71
+positive 0.70 0.92 0.79
+Mean F1: 0.6966
+##################################################
+
+Feature Selection 76 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.67 0.55 0.60
+negative 0.88 0.62 0.73
+positive 0.71 0.92 0.80
+Mean F1: 0.7008
+##################################################
+
+Feature Selection 77 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.67 0.55 0.60
+negative 0.88 0.64 0.74
+positive 0.72 0.91 0.80
+Mean F1: 0.7027
+##################################################
+
+Feature Selection 78 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.67 0.56 0.61
+negative 0.88 0.64 0.74
+positive 0.72 0.91 0.80
+Mean F1: 0.7060
+##################################################
+
+Feature Selection 79 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.66 0.53 0.59
+negative 0.88 0.64 0.74
+positive 0.72 0.91 0.80
+Mean F1: 0.6991
+##################################################
+
+Feature Selection 80 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.68 0.49 0.57
+negative 0.89 0.64 0.74
+positive 0.72 0.92 0.81
+Mean F1: 0.6975
+##################################################
+
+Feature Selection 81 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.71 0.49 0.58
+negative 0.90 0.64 0.75
+positive 0.72 0.93 0.81
+Mean F1: 0.7072
+##################################################
+
+Feature Selection 82 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.71 0.48 0.57
+negative 0.90 0.66 0.76
+positive 0.73 0.93 0.82
+Mean F1: 0.7104
+##################################################
+
+Feature Selection 83 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.69 0.50 0.58
+negative 0.90 0.70 0.79
+positive 0.76 0.93 0.83
+Mean F1: 0.7203
+##################################################
+
+Feature Selection 84 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.65 0.51 0.57
+negative 0.90 0.71 0.79
+positive 0.76 0.92 0.83
+Mean F1: 0.7121
+##################################################
+
+Feature Selection 85 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.67 0.50 0.57
+negative 0.90 0.70 0.79
+positive 0.75 0.92 0.83
+Mean F1: 0.7131
+##################################################
+
+Feature Selection 86 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.68 0.49 0.57
+negative 0.91 0.68 0.78
+positive 0.74 0.93 0.83
+Mean F1: 0.7133
+##################################################
+
+Feature Selection 87 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.69 0.45 0.55
+negative 0.91 0.66 0.76
+positive 0.73 0.94 0.82
+Mean F1: 0.7030
+##################################################
+
+Feature Selection 88 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.68 0.46 0.54
+negative 0.92 0.68 0.78
+positive 0.75 0.94 0.83
+Mean F1: 0.7073
+##################################################
+
+Feature Selection 89 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.67 0.46 0.54
+negative 0.91 0.69 0.79
+positive 0.75 0.93 0.83
+Mean F1: 0.7077
+##################################################
+
+Feature Selection 90 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.69 0.46 0.55
+negative 0.91 0.69 0.79
+positive 0.75 0.93 0.83
+Mean F1: 0.7119
+##################################################
+
+Feature Selection 91 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.70 0.43 0.53
+negative 0.91 0.71 0.80
+positive 0.76 0.93 0.84
+Mean F1: 0.7120
+##################################################
+
+Feature Selection 92 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.69 0.47 0.56
+negative 0.88 0.71 0.79
+positive 0.76 0.91 0.83
+Mean F1: 0.7148
+##################################################
+
+Feature Selection 93 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.69 0.49 0.57
+negative 0.88 0.72 0.79
+positive 0.76 0.91 0.83
+Mean F1: 0.7186
+##################################################
+
+Feature Selection 94 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.70 0.47 0.57
+negative 0.89 0.70 0.78
+positive 0.75 0.91 0.82
+Mean F1: 0.7144
+##################################################
+
+Feature Selection 95 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.69 0.48 0.57
+negative 0.89 0.74 0.81
+positive 0.78 0.91 0.84
+Mean F1: 0.7247
+##################################################
+
+Feature Selection 96 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.70 0.47 0.57
+negative 0.89 0.75 0.81
+positive 0.78 0.91 0.84
+Mean F1: 0.7274
+##################################################
+
+Feature Selection 97 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.73 0.46 0.56
+negative 0.91 0.72 0.80
+positive 0.77 0.93 0.84
+Mean F1: 0.7258
+##################################################
+
+Feature Selection 98 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.72 0.48 0.58
+negative 0.90 0.76 0.82
+positive 0.79 0.91 0.85
+Mean F1: 0.7351
+##################################################
+
+Feature Selection 99 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.73 0.48 0.58
+negative 0.91 0.76 0.83
+positive 0.79 0.93 0.85
+Mean F1: 0.7396
+##################################################
+
+Feature Selection 100 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.75 0.54 0.63
+negative 0.91 0.79 0.85
+positive 0.82 0.92 0.86
+Mean F1: 0.7654
+##################################################
+
+Feature Selection 101 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.75 0.53 0.62
+negative 0.90 0.79 0.84
+positive 0.82 0.91 0.86
+Mean F1: 0.7604
+##################################################
+
+Feature Selection 102 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.77 0.51 0.61
+negative 0.92 0.78 0.84
+positive 0.81 0.93 0.87
+Mean F1: 0.7622
+##################################################
+
+Feature Selection 103 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.76 0.51 0.61
+negative 0.91 0.78 0.84
+positive 0.81 0.93 0.86
+Mean F1: 0.7593
+##################################################
+
+Feature Selection 104 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.74 0.52 0.61
+negative 0.91 0.81 0.85
+positive 0.83 0.92 0.87
+Mean F1: 0.7616
+##################################################
+
+Feature Selection 105 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.75 0.53 0.62
+negative 0.91 0.81 0.85
+positive 0.83 0.92 0.87
+Mean F1: 0.7651
+##################################################
+
+Feature Selection 106 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.75 0.54 0.63
+negative 0.90 0.81 0.85
+positive 0.82 0.91 0.87
+Mean F1: 0.7668
+##################################################
+
+Feature Selection 107 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.77 0.54 0.64
+negative 0.92 0.81 0.86
+positive 0.83 0.93 0.88
+Mean F1: 0.7776
+##################################################
+
+Feature Selection 108 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.77 0.54 0.64
+negative 0.93 0.83 0.88
+positive 0.85 0.94 0.89
+Mean F1: 0.7839
+##################################################
+
+Feature Selection 109 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.77 0.54 0.63
+negative 0.94 0.84 0.88
+positive 0.85 0.94 0.90
+Mean F1: 0.7868
+##################################################
+
+Feature Selection 110 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.77 0.54 0.64
+negative 0.94 0.86 0.90
+positive 0.87 0.94 0.90
+Mean F1: 0.7918
+##################################################
+
+Feature Selection 111 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.76 0.54 0.64
+negative 0.93 0.86 0.89
+positive 0.87 0.93 0.90
+Mean F1: 0.7873
+##################################################
+
+Feature Selection 112 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.77 0.54 0.63
+negative 0.93 0.86 0.89
+positive 0.87 0.93 0.90
+Mean F1: 0.7900
+##################################################
+
+Feature Selection 113 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.78 0.57 0.66
+negative 0.93 0.86 0.89
+positive 0.87 0.93 0.90
+Mean F1: 0.7956
+##################################################
+
+Feature Selection 114 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.78 0.58 0.67
+negative 0.93 0.84 0.89
+positive 0.86 0.94 0.90
+Mean F1: 0.7975
+##################################################
+
+Feature Selection 115 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.79 0.59 0.67
+negative 0.93 0.85 0.89
+positive 0.86 0.94 0.90
+Mean F1: 0.8022
+##################################################
+
+Feature Selection 116 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.77 0.60 0.68
+negative 0.94 0.86 0.90
+positive 0.87 0.95 0.91
+Mean F1: 0.8059
+##################################################
+
+Feature Selection 117 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.79 0.58 0.67
+negative 0.95 0.86 0.90
+positive 0.87 0.95 0.91
+Mean F1: 0.8068
+##################################################
+
+Feature Selection 118 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.79 0.62 0.70
+negative 0.94 0.86 0.90
+positive 0.87 0.94 0.90
+Mean F1: 0.8125
+##################################################
+
+Feature Selection 119 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.78 0.66 0.71
+negative 0.94 0.88 0.91
+positive 0.88 0.94 0.91
+Mean F1: 0.8225
+##################################################
+
+Feature Selection 120 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.79 0.67 0.72
+negative 0.94 0.87 0.90
+positive 0.88 0.94 0.91
+Mean F1: 0.8242
+##################################################
+
+Feature Selection 121 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.78 0.70 0.74
+negative 0.93 0.88 0.90
+positive 0.88 0.93 0.91
+Mean F1: 0.8277
+##################################################
+
+Feature Selection 122 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.77 0.71 0.74
+negative 0.92 0.88 0.90
+positive 0.89 0.93 0.91
+Mean F1: 0.8263
+##################################################
+
+Feature Selection 123 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.79 0.76 0.77
+negative 0.93 0.89 0.91
+positive 0.90 0.94 0.92
+Mean F1: 0.8468
+##################################################
+
+Feature Selection 124 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.80 0.76 0.78
+negative 0.94 0.90 0.92
+positive 0.90 0.94 0.92
+Mean F1: 0.8530
+##################################################
+
+Feature Selection 125 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.81 0.75 0.78
+negative 0.92 0.91 0.92
+positive 0.91 0.92 0.92
+Mean F1: 0.8514
+##################################################
+
+Feature Selection 126 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.80 0.77 0.78
+negative 0.92 0.92 0.92
+positive 0.92 0.93 0.92
+Mean F1: 0.8546
+##################################################
+
+Feature Selection 127 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.82 0.78 0.80
+negative 0.92 0.93 0.93
+positive 0.93 0.92 0.92
+Mean F1: 0.8640
+##################################################
+
+Feature Selection 128 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.82 0.80 0.81
+negative 0.94 0.92 0.93
+positive 0.92 0.94 0.93
+Mean F1: 0.8719
+##################################################
+
+Feature Selection 129 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.80 0.79 0.80
+negative 0.94 0.91 0.93
+positive 0.92 0.94 0.93
+Mean F1: 0.8640
+##################################################
+
+Feature Selection 130 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.81 0.79 0.80
+negative 0.94 0.91 0.93
+positive 0.92 0.94 0.93
+Mean F1: 0.8656
+##################################################
+
+Feature Selection 131 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.81 0.82 0.81
+negative 0.95 0.91 0.93
+positive 0.91 0.96 0.93
+Mean F1: 0.8718
+##################################################
+
+Feature Selection 132 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.84 0.81 0.82
+negative 0.96 0.90 0.93
+positive 0.91 0.96 0.93
+Mean F1: 0.8796
+##################################################
+
+Feature Selection 133 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 134 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 135 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 136 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 137 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 138 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 139 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 140 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 141 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 142 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 143 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 144 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 145 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 146 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 147 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 148 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 149 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+
+Feature Selection 150 times
+##################################################
+Result: recall | precision | f1 
+deceptive 0.85 0.79 0.82
+negative 0.96 0.89 0.93
+positive 0.90 0.96 0.93
+Mean F1: 0.8780
+##################################################
+

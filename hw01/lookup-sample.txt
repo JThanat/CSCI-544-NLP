@@ -1,0 +1,22 @@
+Training statistics
+Wordform types: 16879
+Wordform tokens: 281057
+Unambiguous types: 16465
+Unambiguous tokens: 196204
+Ambiguous types: 414
+Ambiguous tokens: 84853
+Ambiguous most common tokens: 75667
+Identity tokens: 201485
+Expected lookup accuracy: 0.967316238343
+Expected identity accuracy: 0.716883052192
+Test results
+Total test items: 35430
+Found in lookup table: 33849
+Lookup match: 32596
+Lookup mismatch: 1253
+Not found in lookup table: 1581
+Identity match: 1227
+Identity mismatch: 354
+Lookup accuracy: 0.962982658276
+Identity accuracy: 0.776091081594
+Overall accuracy: 0.954642957945
