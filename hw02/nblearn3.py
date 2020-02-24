@@ -130,6 +130,7 @@ def select_feature(docs, k):
         U = compute_feature_utility(docs, t, nb_class)
         L.append((U, t))
     L.sort(reverse=True)
+    print(L)
     return L[:k]
 
 neg_dec = os.scandir(os.path.join(path_to_train, "negative_polarity/deceptive_from_MTurk"))
