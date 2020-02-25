@@ -8,6 +8,22 @@ import numpy as np
 path_to_model = sys.argv[1]
 path_to_test = sys.argv[2]
 
+neg_dict = {
+        "can't": "can not",
+        "couldn't": "could not",
+        "don't": "do not",
+        "doesn't": "does not",
+        "didn't": "did not",
+        "haven't": "have not",
+        "hasn't": "has not",
+        "hadn't": "had not",
+        "won't": "will not",
+        "would't": "would not",
+        "shouldn't": "should not",
+        "isn't": "is not",
+        "aren't": "are not",
+    }
+
 def get_all_file_path(path, depth):
     if os.path.isfile(path) and ".txt" in path and "README" not in path and depth == 4:
         return [path]
@@ -17,6 +33,14 @@ def get_all_file_path(path, depth):
             result.extend(get_all_file_path(entry.path, depth + 1))
         return result
     return []
+
+
+def multiple_replace(dict, text):
+    # Create a regular expression  from the dictionary keys
+    regex = re.compile("(%s)" % "|".join(map(re.escape, dict.keys())))
+
+    # For each match, look-up corresponding value in dictionary
+    return regex.sub(lambda mo: dict[mo.string[mo.start():mo.end()]], text)
 
 
 def vector_construction(doc, features):
@@ -54,10 +78,11 @@ for test_file in test_file_path:
     with open(test_file, "r", encoding="utf-8") as file_reader:
         doc = ""
         for line in file_reader:
-            doc += line
-        td, pn = classify(doc, model, ["truthful_deceptive", "positive_negative"])
+            doc += line.lower()
+        sub_doc = multiple_replace(neg_dict, doc)
+        td, pn = classify(sub_doc, model, ["truthful_deceptive", "positive_negative"])
         output += td + " " + pn + " " + test_file + "\n"
 
 
-with open("nboutput.txt", "w", encoding="utf-8") as txt_writer:
+with open("percepoutput.txt", "w", encoding="utf-8") as txt_writer:
     txt_writer.write(output.strip())

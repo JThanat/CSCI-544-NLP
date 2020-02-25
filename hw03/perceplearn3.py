@@ -7,18 +7,23 @@ import random
 
 path_to_train = sys.argv[1]
 
-
-stop_words = {"i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", "yourself",
-              "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself",
-              "they", "them", "their", "theirs", "themselves", "what", "which", "who", "whom", "this", "that", "these",
-              "those", "am", "is", "are", "was", "were", "be", "been", "being", "have", "has", "had", "having", "do",
-              "does", "did", "doing", "a", "an", "the", "and", "but", "if", "or", "because", "as", "until", "while",
-              "of", "at", "by", "for", "with", "about", "against", "between", "into", "through", "during", "before",
-              "after", "above", "below", "to", "from", "up", "down", "in", "out", "on", "off", "over", "under", "again",
-              "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any", "both", "each",
-              "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so", "than",
-              "too", "very", "s", "t", "can", "will", "just", "don", "should", "now","room", "hotel", "chicago", "stay", "rooms", "staff", "stayed", "Hotel", "michigan", "would"}
-
+stop_words = {}
+# stop_words = {"the", "and", "a", "to", "in", "was", "i", "of", "for", "room", "at", "it", "this", "my", "with", "is", "that", "were", "on", "had", "we", "have", "be", "from", "when", "all", "you", "our", "as", "so", "stayed", "hotels"}
+neg_dict = {
+        "can't": "can not",
+        "couldn't": "could not",
+        "don't": "do not",
+        "doesn't": "does not",
+        "didn't": "did not",
+        "haven't": "have not",
+        "hasn't": "has not",
+        "hadn't": "had not",
+        "won't": "will not",
+        "would't": "would not",
+        "shouldn't": "should not",
+        "isn't": "is not",
+        "aren't": "are not",
+    }
 
 def get_all_file_path(path, depth):
     if os.path.isfile(path) and ".txt" in path and "README" not in path and depth == 4:
@@ -41,9 +46,18 @@ def read_file(class_folder):
                 with open(training_file.path, "r", encoding="utf-8") as file_reader:
                     doc = ""
                     for line in file_reader:
-                        doc += line
-                    docs.append(doc)
+                        doc += line.lower()
+                    sub_doc = multiple_replace(neg_dict, doc)
+                    docs.append(sub_doc)
     return docs
+
+
+def multiple_replace(dict, text):
+    # Create a regular expression  from the dictionary keys
+    regex = re.compile("(%s)" % "|".join(map(re.escape, dict.keys())))
+
+    # For each match, look-up corresponding value in dictionary
+    return regex.sub(lambda mo: dict[mo.string[mo.start():mo.end()]], text)
 
 
 def tokenize(doc):
@@ -64,6 +78,7 @@ def feature_selection(docs):
                 count_token[t] = 0
             count_token[t] += 1
 
+    count_token = dict(filter(lambda elem: elem[1] >= 5, count_token.items()))
     sorted_x = sorted(count_token.items(), key=lambda kv: kv[1], reverse=True)
     return sorted_x
 
@@ -85,19 +100,43 @@ def vector_construction(_class_value, docs, features):
 def train_classifier(feat_len, max_iter, feature_vectors):
     wd = np.zeros(feat_len)
     b = 0
-    random.seed(99)
     for i in range(0, max_iter):
         random.shuffle(feature_vectors)
-        updated = False
+        converged = True
         for y, xd in feature_vectors:
             ac = np.dot(xd, wd)
             if ac * y <= 0:
-                updated = True
+                converged = False
                 wd = wd + y*xd
                 b = b + y
-        if not updated:
+        if converged:
+            # print("converge at round {}".format(i))
             break
     return wd, b
+
+
+def train_average_classifier(feat_len, max_iter, feature_vectors):
+    wd = np.zeros(feat_len)
+    b = 0
+    cached_w = np.zeros(feat_len)
+    cached_b = 0
+    c = 1
+    for i in range(0, max_iter):
+        random.shuffle(feature_vectors)
+        converged = True
+        for y, xd in feature_vectors:
+            ac = np.dot(xd, wd)
+            if ac * y <= 0:
+                converged = False
+                wd = wd + y*xd
+                b = b + y
+                cached_w = cached_w + y*c*xd
+                cached_b = cached_b + y*c
+            c += 1
+        if converged:
+            print("converge at round {}".format(i))
+            break
+    return wd - cached_w/c, b - cached_b/c
 
 
 neg_dec = os.scandir(os.path.join(path_to_train, "negative_polarity/deceptive_from_MTurk"))
@@ -111,31 +150,37 @@ pos_dec_docs = read_file(pos_dec)
 pos_tr_docs = read_file(pos_tr)
 
 #### Vanilla Classifier ####
-max_iter = 2000
+max_iter = 100
+random.seed(99)
 # Feature Selection
 features_candidate = feature_selection(neg_dec_docs + neg_tr_docs + pos_dec_docs + pos_tr_docs)[:1500]
 features_candidate = [w for w, c in features_candidate]
 # Truthful Deceptive
-feature_vector = vector_construction(1, neg_tr_docs + pos_tr_docs, features_candidate)
-feature_vector = feature_vector + vector_construction(-1, neg_dec_docs + pos_dec_docs, features_candidate)
-w_td, b_td = train_classifier(len(features_candidate), max_iter, feature_vector)
+feature_vector_td = vector_construction(1, neg_tr_docs + pos_tr_docs, features_candidate)
+feature_vector_td = feature_vector_td + vector_construction(-1, neg_dec_docs + pos_dec_docs, features_candidate)
+w_td, b_td = train_classifier(len(features_candidate), max_iter, feature_vector_td)
 # Positive Negative
-feature_vector = vector_construction(1, pos_dec_docs + pos_tr_docs, features_candidate)
-feature_vector = feature_vector + vector_construction(-1, neg_dec_docs + neg_tr_docs, features_candidate)
-w_pn, b_pn = train_classifier(len(features_candidate), max_iter, feature_vector)
+feature_vector_pn = vector_construction(1, pos_dec_docs + pos_tr_docs, features_candidate)
+feature_vector_pn = feature_vector_pn + vector_construction(-1, neg_dec_docs + neg_tr_docs, features_candidate)
+w_pn, b_pn = train_classifier(len(features_candidate), max_iter, feature_vector_pn)
 
 #### Average Classifier ####
 # Truthful Deceptive
-# train_classifier()
+w_td_avg, b_td_avg = train_classifier(len(features_candidate), max_iter, feature_vector_td)
 # Positive Negative
-# train_classifier()
+w_pn_avg, b_pn_avg = train_classifier(len(features_candidate), max_iter, feature_vector_pn)
 
 
-# average_classifier_params = ["", "", ""]
-# average_classifier_model = dict.fromkeys(average_classifier_params)
-# with open("averagedmodel.txt", "w", encoding="utf-8") as txt_writer:
-#     json.dump(average_classifier_model, txt_writer)
-vanilla_classifier_model = {"w":{}, "b":{}}
+average_classifier_model = {"w": {}, "b": {}}
+average_classifier_model["b"]["truthful_deceptive"] = b_td_avg
+average_classifier_model["b"]["positive_negative"] = b_pn_avg
+average_classifier_model["w"]["positive_negative"] = w_pn_avg.tolist()
+average_classifier_model["w"]["truthful_deceptive"] = w_td_avg.tolist()
+average_classifier_model["features"] = features_candidate
+with open("averagedmodel.txt", "w", encoding="utf-8") as txt_writer:
+    json.dump(average_classifier_model, txt_writer)
+
+vanilla_classifier_model = {"w": {}, "b": {}}
 vanilla_classifier_model["b"]["truthful_deceptive"] = b_td
 vanilla_classifier_model["b"]["positive_negative"] = b_pn
 vanilla_classifier_model["w"]["positive_negative"] = w_pn.tolist()
