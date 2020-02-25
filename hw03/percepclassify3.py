@@ -57,8 +57,8 @@ def vector_construction(doc, features):
 
 def classify(doc, model, pclass):
     score = {}
-    v = vector_construction(doc, model["features"])
     for c in pclass:
+        v = vector_construction(doc, model["features"][c])
         predicted = np.dot(model["w"][c], v) + model["b"][c]
         score[c] = 1 if predicted > 0 else 0
     td = "truthful" if score["truthful_deceptive"] > 0 else "deceptive"

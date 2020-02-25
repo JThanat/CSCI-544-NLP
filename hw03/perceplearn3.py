@@ -155,36 +155,46 @@ random.seed(99)
 # Feature Selection
 features_candidate = feature_selection(neg_dec_docs + neg_tr_docs + pos_dec_docs + pos_tr_docs)[:1500]
 features_candidate = [w for w, c in features_candidate]
+fn = set([k for k, _ in feature_selection(neg_dec_docs + neg_tr_docs)])
+fp = set([k for k, _ in feature_selection(pos_dec_docs + pos_tr_docs)])
+fd = set([k for k, _ in feature_selection(neg_dec_docs + pos_dec_docs)])
+ft = set([k for k, _ in feature_selection(neg_tr_docs + pos_tr_docs)])
+fpn = fn.union(fp)
+ftd = fd.union(ft)
+fc_pn_list = sorted(list(fpn))
+fc_td_list = sorted(list(ftd))
 # Truthful Deceptive
-feature_vector_td = vector_construction(1, neg_tr_docs + pos_tr_docs, features_candidate)
-feature_vector_td = feature_vector_td + vector_construction(-1, neg_dec_docs + pos_dec_docs, features_candidate)
-w_td, b_td = train_classifier(len(features_candidate), max_iter, feature_vector_td)
+training_vector_td = vector_construction(1, neg_tr_docs + pos_tr_docs, fc_td_list)
+training_vector_td = training_vector_td + vector_construction(-1, neg_dec_docs + pos_dec_docs, fc_td_list)
+w_td, b_td = train_classifier(len(fc_td_list), max_iter, training_vector_td)
 # Positive Negative
-feature_vector_pn = vector_construction(1, pos_dec_docs + pos_tr_docs, features_candidate)
-feature_vector_pn = feature_vector_pn + vector_construction(-1, neg_dec_docs + neg_tr_docs, features_candidate)
-w_pn, b_pn = train_classifier(len(features_candidate), max_iter, feature_vector_pn)
+training_vector_pn = vector_construction(1, pos_dec_docs + pos_tr_docs, fc_pn_list)
+training_vector_pn = training_vector_pn + vector_construction(-1, neg_dec_docs + neg_tr_docs, fc_pn_list)
+w_pn, b_pn = train_classifier(len(fc_pn_list), max_iter, training_vector_pn)
 
 #### Average Classifier ####
 # Truthful Deceptive
-w_td_avg, b_td_avg = train_classifier(len(features_candidate), max_iter, feature_vector_td)
+w_td_avg, b_td_avg = train_classifier(len(fc_td_list), max_iter, training_vector_td)
 # Positive Negative
-w_pn_avg, b_pn_avg = train_classifier(len(features_candidate), max_iter, feature_vector_pn)
+w_pn_avg, b_pn_avg = train_classifier(len(fc_pn_list), max_iter, training_vector_pn)
 
 
-average_classifier_model = {"w": {}, "b": {}}
+average_classifier_model = {"w": {}, "b": {}, "features": {}}
 average_classifier_model["b"]["truthful_deceptive"] = b_td_avg
 average_classifier_model["b"]["positive_negative"] = b_pn_avg
 average_classifier_model["w"]["positive_negative"] = w_pn_avg.tolist()
 average_classifier_model["w"]["truthful_deceptive"] = w_td_avg.tolist()
-average_classifier_model["features"] = features_candidate
+average_classifier_model["features"]["truthful_deceptive"] = fc_td_list
+average_classifier_model["features"]["positive_negative"] = fc_pn_list
 with open("averagedmodel.txt", "w", encoding="utf-8") as txt_writer:
     json.dump(average_classifier_model, txt_writer)
 
-vanilla_classifier_model = {"w": {}, "b": {}}
+vanilla_classifier_model = {"w": {}, "b": {}, "features": {}}
 vanilla_classifier_model["b"]["truthful_deceptive"] = b_td
 vanilla_classifier_model["b"]["positive_negative"] = b_pn
 vanilla_classifier_model["w"]["positive_negative"] = w_pn.tolist()
 vanilla_classifier_model["w"]["truthful_deceptive"] = w_td.tolist()
-vanilla_classifier_model["features"] = features_candidate
+vanilla_classifier_model["features"]["truthful_deceptive"] = fc_td_list
+vanilla_classifier_model["features"]["positive_negative"] = fc_pn_list
 with open("vanillamodel.txt", "w", encoding="utf-8") as txt_writer:
     json.dump(vanilla_classifier_model, txt_writer)
