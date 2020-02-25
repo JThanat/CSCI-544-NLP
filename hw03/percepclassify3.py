@@ -24,6 +24,7 @@ neg_dict = {
         "aren't": "are not",
     }
 
+
 def get_all_file_path(path, depth):
     if os.path.isfile(path) and ".txt" in path and "README" not in path and depth == 4:
         return [path]

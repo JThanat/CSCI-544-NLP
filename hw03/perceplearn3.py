@@ -63,21 +63,18 @@ def multiple_replace(dict, text):
 def tokenize(doc):
     # filter stopwords later
     token_list = [x.strip() for x in re.sub(r"[^a-zA-Z ]", "", doc).split(" ") if len(x) > 0]
-    tokens = set(token_list)
-    for token in token_list:
-        if token.lower() in stop_words and token in tokens:
-            tokens.remove(token)
-    return tokens
+    return token_list
 
 def feature_selection(docs):
     count_token = {}
     for i, doc in enumerate(docs):
-        token_set = tokenize(doc)
-        for t in token_set:
+        token_list = tokenize(doc)
+        for t in token_list:
             if t not in count_token:
                 count_token[t] = 0
             count_token[t] += 1
-
+    sorted_y = sorted(count_token.items(), key=lambda kv: kv[1], reverse=True)
+    print(sorted_y)
     count_token = dict(filter(lambda elem: elem[1] >= 5, count_token.items()))
     sorted_x = sorted(count_token.items(), key=lambda kv: kv[1], reverse=True)
     return sorted_x
@@ -151,10 +148,11 @@ pos_tr_docs = read_file(pos_tr)
 
 #### Vanilla Classifier ####
 max_iter = 100
-random.seed(99)
+# random.seed(99)
 # Feature Selection
-features_candidate = feature_selection(neg_dec_docs + neg_tr_docs + pos_dec_docs + pos_tr_docs)[:1500]
-features_candidate = [w for w, c in features_candidate]
+# features_candidate = feature_selection(neg_dec_docs + neg_tr_docs + pos_dec_docs + pos_tr_docs)[:1500]
+# features_candidate = [w for w, c in features_candidate]
+
 fn = set([k for k, _ in feature_selection(neg_dec_docs + neg_tr_docs)])
 fp = set([k for k, _ in feature_selection(pos_dec_docs + pos_tr_docs)])
 fd = set([k for k, _ in feature_selection(neg_dec_docs + pos_dec_docs)])
