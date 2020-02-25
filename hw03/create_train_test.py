@@ -3,7 +3,10 @@ import sys
 from shutil import copyfile, copytree, rmtree, ignore_patterns
 
 resource = "./resources"
-test_fold = "fold" + sys.argv[1]
+if len(sys.argv) > 1:
+    test_fold = "fold" + sys.argv[1]
+else:
+    test_fold = "fold1"
 
 neg_dec = os.scandir("./resources/negative_polarity/deceptive_from_MTurk")
 neg_tr = os.scandir("./resources/negative_polarity/truthful_from_Web")
