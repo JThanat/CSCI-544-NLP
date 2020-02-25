@@ -10,7 +10,7 @@ negative_stat = dict.fromkeys(stat_header, 0)
 
 ground_truth_dict = {}
 
-with open("nboutput.txt", "r") as output_reader:
+with open("percepoutput.txt", "r") as output_reader:
     for line in output_reader:
         l = line.split(" ")
         is_deceptive = "deceptive" in l[2]
@@ -92,9 +92,4 @@ print(output)
 with open("result.txt", "a") as result_writer:
     result_writer.write(output)
 
-# Results 1:
-# deceptive 0.84 0.87 0.85
-# truthful 0.86 0.83 0.85
-# negative 0.96 0.85 0.90
-# positive 0.87 0.96 0.91
-# Mean F1: 0.8779
+# The reference is 0.8528 for the vanilla model and 0.8515 for the averaged model
