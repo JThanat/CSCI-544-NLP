@@ -74,3 +74,10 @@ fabric.properties
 .idea/**/markdown-navigator/
 
 # End of https://www.gitignore.io/api/pycharm
+hw03/averagedmodel.txt
+hw03/features.txt
+hw03/nboutput.txt
+hw03/percepoutput.txt
+hw03/result.txt
+hw03/tmp.txt
+hw03/vanillamodel.txt
