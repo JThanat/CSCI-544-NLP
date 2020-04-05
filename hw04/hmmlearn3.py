@@ -106,9 +106,10 @@ total_top_n = sum([v for k, v in sort_tag_count[0: pick_top_n]])
 
 for i in range(0, pick_top_n):
     tag, count = sort_tag_count[i]
-    # distribution = int(pick_top_n * (count / total_top_n)) if int(pick_top_n * (count / total_top_n)) > 0 else 1
-    word_count['##unseen##'][tag] = pick_top_n - i
-    tag_count_for_word_emission[tag] += pick_top_n - i
+    # distribution = int(pick_top_n * (count / total_top_n)) if int(pick_top_n * (count / total_top_n)) > 0 else 1 # 93.10547531071549, 90.9755460795405
+    distribution = pick_top_n - i  # 93.33221363789049, 91.10608302149508
+    word_count['##unseen##'][tag] = distribution
+    tag_count_for_word_emission[tag] += distribution
 
 for w, poss_tag_count in word_count.items():
     for t, n in poss_tag_count.items():
