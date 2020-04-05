@@ -72,6 +72,7 @@ for k in tag_list:
 for w in word_count.keys():
     p_emission[w] = dict.fromkeys(tag_list, 0)
 
+# Calculate P_Transitioin
 for t1, next_states in transition_count.items():
     count = 0
     possible_tags = []
@@ -80,20 +81,47 @@ for t1, next_states in transition_count.items():
         count += c
 
     for t2 in possible_tags:
-        p_transition[t1][t2] = transition_count[t1][t2] / count
+        p_transition[t1][t2] = transition_count[t1][t2]
+
+    for t2 in p_transition[t1].keys():
+        # add one to all transition
+        p_transition[t1][t2] += 1
+        count += 1
+
+    for t2 in p_transition[t1].keys():
+        p_transition[t1][t2] /= count
+
+# Calculate P_Emission
+# How to deal with unseen word emission ?
+# Pick top N tags and then add as unseen
+# HMM Constraint: Total Probability of state qi emitting the observation vj must be 1
+tag_count_for_word_emission = tag_count.copy() # Number of tag --> aka number of emission by tag
+sort_tag_count = sorted(tag_count_for_word_emission.items(), key=lambda kv:kv[1], reverse=True)
+
+word_count["##unseen##"] = {}
+p_emission['##unseen##'] = dict.fromkeys(tag_list, 0)
+
+pick_top_n = int(len(sort_tag_count)/4)
+total_top_n = sum([v for k, v in sort_tag_count[0: pick_top_n]])
+
+for i in range(0, pick_top_n):
+    tag, count = sort_tag_count[i]
+    # distribution = int(pick_top_n * (count / total_top_n)) if int(pick_top_n * (count / total_top_n)) > 0 else 1
+    word_count['##unseen##'][tag] = pick_top_n - i
+    tag_count_for_word_emission[tag] += pick_top_n - i
 
 for w, poss_tag_count in word_count.items():
     for t, n in poss_tag_count.items():
-        p_emission[w][t] = n / tag_count[t]
+        p_emission[w][t] = n / tag_count_for_word_emission[t]
 
 # Generate Possibility for unseen
-ntags = sum([v for k, v in tag_count.items()])
-l_tags = [(k, v / ntags) for k, v in tag_count.items()]
+# ntags = sum([v for k, v in tag_count.items()])
+# l_tags = [(k, v / ntags) for k, v in tag_count.items()]
 # l_tags = sorted(l_tags,key=lambda x: x[1], reverse=True)
-p_emission['##unseen##'] = {}
-for t, prob in l_tags:
-    p_emission['##unseen##'][t] = prob
-p_emission['##unseen##']
+# p_emission['##unseen##'] = {}
+# for t, prob in l_tags:
+#     p_emission['##unseen##'][t] = prob
+# p_emission['##unseen##']
 
 hmm_model = {}
 hmm_model['p_transition'] = p_transition

@@ -18,39 +18,6 @@ def handle_unseen(T, idx, b):
         b[T[idx]] = b['##unseen##']
 
 
-def handle_no_possible_transition(Q, T, t, b, prob, back_pointer):
-    max_prev_t = 2
-    most_likely_pq = None
-    for ipq, pq in enumerate(Q):
-        if prob[ipq][t - 1] == 2:
-            continue
-        if max_prev_t == 2:
-            max_prev_t = prob[ipq][t - 1]
-            most_likely_pq = pq
-        else:
-            if prob[ipq][t - 1] > max_prev_t:
-                max_prev_t = prob[ipq][t - 1]
-                most_likely_pq = pq
-
-    max_cur_emission = 2
-    cq = None
-    most_liekly_iq = -1
-    for iq, q in enumerate(Q):
-        if b[T[t]][q] == 0:
-            continue
-        if max_cur_emission == 2:
-            max_cur_emission = math.log(b[T[t]][q])
-            cq = q
-            most_liekly_iq = iq
-        else:
-            if math.log(b[T[t]][q]) > max_cur_emission:
-                max_cur_emission = math.log(b[T[t]][q])
-                cq = q
-                most_liekly_iq = iq
-    back_pointer[cq][t] = most_likely_pq
-    prob[most_liekly_iq][t] = max_prev_t + max_cur_emission
-
-
 def viterbi(sent, hmm_model):
     # Viterbi
     back_pointer = {}
@@ -69,7 +36,6 @@ def viterbi(sent, hmm_model):
     # cal neg value --> find max arg --> skip no value
     # or negate to get pos value -> find min --> like find min entropy
 
-    # TODO - Smoothing a[q'][q] == 0
     # initialize at step t_0
     for iq, q in enumerate(Q):
         back_pointer[q] = {}  # initialize backpointer with all key 'q' in Q
@@ -102,12 +68,12 @@ def viterbi(sent, hmm_model):
                         argmax_b = prob[ipq][t - 1] + math.log(a[pq][q])
                         back_pointer[q][t] = pq
 
-        if not has_transition:
-            # Prob: when state 't' is unreachable
-            # case: there is only one transition to QT and that word has no b[w][pos] value
-            # Or the only b[w][pos] we have is not reachable
-            # Sol: use most likely tag for current 't' and use most likely tag for prev t
-            handle_no_possible_transition(Q, T, t, b, prob, back_pointer)
+        # if not has_transition:
+        #     # Prob: when state 't' is unreachable
+        #     # case: there is only one transition to QT and that word has no b[w][pos] value
+        #     # Or the only b[w][pos] we have is not reachable
+        #     # Sol: use most likely tag for current 't' and use most likely tag for prev t
+        #     handle_no_possible_transition(Q, T, t, b, prob, back_pointer)
 
     # At termination step: QT
     bpt_qt = None
