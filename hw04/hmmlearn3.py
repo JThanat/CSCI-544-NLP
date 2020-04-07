@@ -1,5 +1,6 @@
 import json
 import sys
+from collections import OrderedDict
 
 path_to_input = sys.argv[1]
 
@@ -15,7 +16,7 @@ transition_count = {}
 # P(observation|state) or P(word|tag) --> This version is better than a more intuitive version
 # P(tag|word) ref. Charniak paper
 p_emission = {}
-tag_count = {}
+tag_count = OrderedDict()
 word_count = {}
 
 
@@ -96,24 +97,50 @@ for t1, next_states in transition_count.items():
 # Pick top N tags and then add as unseen
 # HMM Constraint: Total Probability of state qi emitting the observation vj must be 1
 tag_count_for_word_emission = tag_count.copy() # Number of tag --> aka number of emission by tag
-sort_tag_count = sorted(tag_count_for_word_emission.items(), key=lambda kv:kv[1], reverse=True)
+
+# find rarest word method
+num_found = 0
+total_count = 0
+found_dist = False
+rare_word_tag = dict.fromkeys(tag_count.keys(), 0)
+while not found_dist:
+    total_count = 0
+    num_found += 1
+    for word, tag_pos in word_count.items():
+        ntags = sum([v for k, v in tag_pos.items()])
+        if ntags == num_found:
+            found_dist = True
+            t = list(tag_pos.keys())[0]
+            rare_word_tag[t] += 1
+            total_count += 1
+
+for k in rare_word_tag.keys():
+    rare_word_tag[k] /= total_count
 
 word_count["##unseen##"] = {}
 p_emission['##unseen##'] = dict.fromkeys(tag_list, 0)
-
-pick_top_n = int(len(sort_tag_count)/4)
-total_top_n = sum([v for k, v in sort_tag_count[0: pick_top_n]])
-
-for i in range(0, pick_top_n):
-    tag, count = sort_tag_count[i]
-    # distribution = int(pick_top_n * (count / total_top_n)) if int(pick_top_n * (count / total_top_n)) > 0 else 1 # 93.10547531071549, 90.9755460795405
-    distribution = pick_top_n - i  # 93.33221363789049, 91.10608302149508
-    word_count['##unseen##'][tag] = distribution
-    tag_count_for_word_emission[tag] += distribution
-
+# Use top n most common tag
+# sort_tag_count = sorted(tag_count_for_word_emission.items(), key=lambda kv:kv[1], reverse=True)
+#
+# word_count["##unseen##"] = {}
+# p_emission['##unseen##'] = dict.fromkeys(tag_list, 0)
+#
+# pick_top_n = int(len(sort_tag_count)/4)
+# total_top_n = sum([v for k, v in sort_tag_count[0: pick_top_n]])
+#
+# for i in range(0, pick_top_n):
+#     tag, count = sort_tag_count[i]
+#     # distribution = int(pick_top_n * (count / total_top_n)) if int(pick_top_n * (count / total_top_n)) > 0 else 1 # 93.10547531071549, 90.9755460795405
+#     distribution = pick_top_n - i  # 93.33221363789049, 91.10608302149508
+#     word_count['##unseen##'][tag] = distribution
+#     tag_count_for_word_emission[tag] += distribution
+#
 for w, poss_tag_count in word_count.items():
     for t, n in poss_tag_count.items():
         p_emission[w][t] = n / tag_count_for_word_emission[t]
+
+for t in rare_word_tag.keys():
+    p_emission['##unseen##'][t] = rare_word_tag[t]
 
 # Generate Possibility for unseen
 # ntags = sum([v for k, v in tag_count.items()])
